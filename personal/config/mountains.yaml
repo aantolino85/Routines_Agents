@@ -1,0 +1,57 @@
+# Mountains to score each week.
+# drive_hours = typical drive from Andover, MA, without traffic. Edit freely.
+# elevation_m = upper-mountain elevation used for the forecast (summit snow, not base rain).
+
+scoring:
+  weekend_days: [Saturday, Sunday]   # add Friday if you take it off
+  drive_penalty_after_hours: 2.0     # points start dropping after this many hours
+  rain_threshold_in: 0.10            # liquid rain (not snow) per day that counts as a rain day
+  warm_max_f: 40                     # daytime high above this = soft or slushy
+  cold_min_f: -5                     # overnight low below this = brutal
+  windy_mph: 30                      # max wind above this = lift-hold risk
+
+mountains:
+  - id: wachusett
+    name: Wachusett
+    state: MA
+    drive_hours: 1.1
+    latitude: 42.5031
+    longitude: -71.8865
+    elevation_m: 600
+    snow_report_url: https://www.wachusett.com/the-mountain/conditions/
+
+  - id: waterville
+    name: Waterville Valley
+    state: NH
+    drive_hours: 1.8
+    latitude: 43.9500
+    longitude: -71.5270
+    elevation_m: 1150
+    snow_report_url: https://www.waterville.com/snow-report
+
+  - id: loon
+    name: Loon Mountain
+    state: NH
+    drive_hours: 1.9
+    latitude: 44.0364
+    longitude: -71.6214
+    elevation_m: 930
+    snow_report_url: https://www.loonmtn.com/mountain-report
+
+  - id: killington
+    name: Killington
+    state: VT
+    drive_hours: 2.9
+    latitude: 43.6045
+    longitude: -72.8201
+    elevation_m: 1250
+    snow_report_url: https://www.killington.com/the-mountain/conditions-weather/current-conditions-weather
+
+  - id: stowe
+    name: Stowe
+    state: VT
+    drive_hours: 3.3
+    latitude: 44.5303
+    longitude: -72.7814
+    elevation_m: 1100
+    snow_report_url: https://www.stowe.com/the-mountain/mountain-conditions/snow-and-weather-report.aspx

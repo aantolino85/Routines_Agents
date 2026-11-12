@@ -1,0 +1,9 @@
+# Home base and delivery settings for the personal concierge
+home:
+  name: Andover, MA
+  latitude: 42.6583
+  longitude: -71.1368
+  timezone: America/New_York
+
+# Email delivery (optional). Leave blank to skip email; reports are always committed to the repo.
+email_to: ""

@@ -1,0 +1,47 @@
+# What the deal desk covers. Each bucket is searched by its own deal-scout in parallel.
+email_to: ""        # optional; leave blank to skip email
+
+thresholds:
+  min_deal_usd_m: 100          # include transactions at or above this size
+  min_capacity_mw: 100         # ...or at or above this capacity
+  always_include_if_novel: true   # first-of-a-kind structures get in regardless of size
+
+buckets:
+  renewables_storage_transactions:
+    focus: >
+      M&A, portfolio sales, project finance, tax equity, ITC/PTC credit transfers, construction / term debt,
+      platform capital raises and fund closes in solar, wind, storage, RNG, hydrogen.
+    queries: ["solar portfolio acquisition", "battery storage project financing closed",
+              "tax credit transfer deal", "tax equity financing", "renewable platform capital raise",
+              "infrastructure fund close energy transition"]
+
+  power_conventional_nuclear:
+    focus: >
+      Gas, nuclear (incl. SMRs, restarts, uprates), geothermal, transmission and utility M&A; IPP deals;
+      large PPAs and offtake agreements.
+    queries: ["power plant acquisition", "nuclear power purchase agreement", "SMR investment",
+              "utility acquisition announced", "transmission project financing", "IPP merger"]
+
+  data_centers:
+    focus: >
+      Data center campus announcements, JV / development capital, hyperscaler capex and power procurement,
+      behind-the-meter generation, large-load deals with utilities, data center ABS / CMBS / private credit.
+    queries: ["data center campus investment", "hyperscaler power purchase agreement",
+              "data center joint venture", "data center financing", "behind-the-meter data center power",
+              "large load tariff data center"]
+
+  policy_legal_markets:
+    focus: >
+      Treasury / IRS guidance on energy credits, FERC orders (interconnection, co-location, large loads),
+      DOE loans and grants, permitting reform, tariffs and trade, state siting / RPS changes, key court rulings,
+      capacity auction results (PJM, ISO-NE, NYISO, ERCOT), interconnection queue data, credit / rate shifts.
+    queries: ["Treasury guidance energy tax credit", "FERC order co-location", "permitting reform bill energy",
+              "PJM capacity auction", "ISO-NE capacity", "solar tariff ruling", "DOE loan programs office"]
+
+preferred_sources:
+  - Reuters (energy), Bloomberg (headlines), WSJ (headlines)
+  - Utility Dive, Canary Media, Latitude Media, Heatmap
+  - PV Tech, Energy-Storage.news, Renewable Energy World, Power Engineering
+  - Data Center Dynamics, Data Center Frontier
+  - Infralogic / IJGlobal / PFI (headlines), Norton Rose Fulbright "Currents" (tax equity / project finance)
+  - FERC, Treasury / IRS, DOE press releases; company press releases

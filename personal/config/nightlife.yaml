@@ -1,0 +1,25 @@
+# What counts as a good night out, and where to look.
+max_picks: 5
+radius_miles: 30            # from Andover; Boston shows are fine if they're standouts
+include_boston: true
+
+event_types:                # in rough order of preference; edit to taste
+  - live music
+  - trivia night
+  - comedy
+  - brewery / taproom events
+  - other (festivals, tastings, etc.)
+
+# Artists to always flag if they play within ~2 hours, even if it's not this week (put announcements in a "Heads up" line)
+favorite_artists: []        # e.g. ["Artist One", "Artist Two"]
+
+# Places to check first. These are seeds, not limits; add your regulars.
+seed_venues:
+  - Tupelo Music Hall (Derry, NH)
+  - Lowell Memorial Auditorium (Lowell, MA)
+  - The Cabot (Beverly, MA)
+  - Boston clubs: Paradise Rock Club, Brighton Music Hall, Roadrunner, The Sinclair, House of Blues
+
+seed_towns: [Andover, North Andover, Lowell, Lawrence, Haverhill, Methuen, Reading, Newburyport, Salem NH]
+
+avoid: []                   # genres or venues to skip

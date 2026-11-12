@@ -1,0 +1,20 @@
+# Dog profile and what to look for.
+dog:
+  name: ""          # fill in
+  size: ""          # small / medium / large
+  notes: ""         # e.g. "loves other dogs", "not great with crowds"
+
+radius_miles: 20    # from Andover
+max_items: 5
+
+look_for:
+  - dog meetups and group hikes
+  - dog-friendly brewery or restaurant events ("yappy hours")
+  - adoption or shelter fundraiser events
+  - boarding / daycare specials, new-client deals, holiday boarding deadlines
+  - dog-friendly lodging near the weekend's top ski pick (only if a ski trip is likely)
+
+seed_sources:
+  - Meetup.com dog groups near Andover, MA
+  - Local shelters' event pages (e.g. MSPCA-Angell / Nevins Farm in Methuen)
+  - Facebook/Eventbrite listings for "dog" events in the seed towns
