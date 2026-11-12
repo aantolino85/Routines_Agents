@@ -1,1 +1,16 @@
 date,parties,type,sector,size_usd_m,capacity_mw,status,headline,url
+2026-11-09,LS Power / NRG Energy,M&A,gas,4000,4979,announced,LS Power buys six NRG gas plants,https://www.powermag.com/ls-power-buying-nearly-5-gw-of-gas-fired-generation-from-nrg-in-4-billion-deal/
+2026-11-11,RWE / KKR / 35 banks,project finance,offshore wind,undisclosed (GBP 11.1bn debt),2800,closed,Vanguard West/East financial close,https://www.rwe.com/en/investor-relations/financial-calendar-and-publications/news-and-ad-hoc-announcements/news/news-2026-11-11_a/
+2026-11-05,Return / Deutsche Bank / Rabobank,project finance,battery storage,936,117,closed,EUR 835m German BESS portfolio framework,https://www.esgtoday.com/deutsche-bank-rabobank-back-936-million-financing-for-battery-storage-expansion-in-germany/
+2026-11-06,Avantus / SMBC et al,capital raise,solar + storage,1280,,reported,Corporate revolver upsized to $1.28B,https://mercomindia.com/avantus-upsizes-corporate-credit-facility-to-1-28-billion
+2026-11-09,Hallador Energy,project finance,gas,600,460,closed,Turtle Creek bridge loan,https://energynews.pro/en/hallador-readies-investment-decision-on-460-mw-turtle-creek-gas-plant
+2026-11-09,Talen Energy / undisclosed IG counterparty,PPA,gas capacity,undisclosed,750,closed,7-year bilateral PJM capacity sale,https://www.sec.gov/Archives/edgar/data/0001622536/000162253626000088/tln-20261109.htm
+2026-11-06,Haoyang DC1 (Thailand) / Thai bank,project finance,data center,590,,announced,7-year loan backed by colocation contract,https://w.media/?p=45170
+2026-11-10,European Energy / Sampension,M&A,solar + storage,undisclosed,323,announced,50% of Danish solar cluster,https://www.pv-tech.org/european-energy-sells-50-stake-in-323mw-danish-solar-pv-portfolio/
+2026-11-06,Frontier Energy / Natixis / SMBC,project finance,solar + storage,194,132,announced,Waroona Stage 1 debt facility,https://www.ess-news.com/2026/11/06/frontier-signs-debt-deal-for-australian-solar-battery-project/
+2026-11-06,Vistra / New Era Energy & Digital,PPA,gas,undisclosed,207,announced,20-yr PPA from Odessa,https://finviz.com/news/418259/vistra-reports-third-quarter-2026-results
+2026-11-09,Constellation / undisclosed customer,PPA,nuclear,undisclosed,270,announced,First Peak+ 20-yr deal,https://www.sec.gov/Archives/edgar/data/0001868275/000186827526000116/ceg-20261109991.htm
+2026-11-05,Google / AEP / Bloom Energy,data center,data center + fuel cells,17000,702,announced,Wyoming campus with fuel cells + CCS,https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/wyoming-data-center/
+2026-11-05,NTT DATA / Bloom Energy,data center,fuel cells,undisclosed,900,announced,900 MW fuel cell agreement,https://www.nttdata.com/en-us/news/2026/ntt-data-announces-agreement-with-bloom-energy
+2026-11-04,Panamint Capital / Lloyds / MUFG / SMBC,project finance,solar,1800,1200,closed,Big Rooter green loan (pre-window catch-up),https://finviz.com/news/415446/panamint-capital-secures-18-billion-green-loan-for-largest-brownfield-renewable-energy-project-in-north-america
+2026-11-04,NBIM / Aypa Power / Brookfield,M&A,battery storage,300,,closed,10% stake (pre-window catch-up),https://www.nbim.no/en/news-and-insights/the-press/press-releases/2026/first-direct-investment-in-battery-storage/

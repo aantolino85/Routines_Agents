@@ -28,19 +28,19 @@ DAILY_VARS = "snowfall_sum,precipitation_sum,temperature_2m_max,temperature_2m_m
 
 
 def api_url(m: dict) -> str:
+    # Kept short on purpose: WebFetch (the fallback path) rejects long URLs.
     params = {
-        "latitude": m["latitude"],
-        "longitude": m["longitude"],
+        "latitude": round(m["latitude"], 2),
+        "longitude": round(m["longitude"], 2),
         "elevation": m.get("elevation_m", ""),
         "daily": DAILY_VARS,
-        "timezone": "America/New_York",
+        "timezone": "auto",
         "past_days": 3,
-        "forecast_days": 7,
         "temperature_unit": "fahrenheit",
         "wind_speed_unit": "mph",
         "precipitation_unit": "inch",
     }
-    return "https://api.open-meteo.com/v1/forecast?" + urllib.parse.urlencode(params)
+    return "https://api.open-meteo.com/v1/forecast?" + urllib.parse.urlencode(params, safe=",")
 
 
 def fetch(url: str) -> dict:

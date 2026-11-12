@@ -4,8 +4,8 @@ Angelo's two Claude Code agents. They live in one repo but are configured separa
 
 | Agent | Folder | Command | Schedule | Output |
 |---|---|---|---|---|
-| **Personal concierge** | `personal/` | `/weekend` | Thursday evening | `personal/reports/YYYY-MM-DD.md` |
-| **Professional deal desk** | `professional/` | `/deals` | Monday morning | `professional/digests/YYYY-MM-DD.md` + `professional/data/deal_log.csv` |
+| **Personal concierge** | `personal/` | `/weekend` | Wednesday 6:00pm ET | `personal/reports/YYYY-MM-DD.md` |
+| **Professional deal desk** | `professional/` | `/deals` | Monday 7:40am ET | `professional/digests/YYYY-MM-DD.md` + `professional/data/deal_log.csv` |
 
 ## Routing
 - For skiing, snow, nightlife, live music, trivia, dog events or the weekend, read `personal/CLAUDE.md` and follow it.

@@ -2,9 +2,9 @@
 
 Two Claude Code agents, each with its own schedule:
 
-- **Personal concierge** (`/weekend`, Thursday evening): ranks your ski mountains (Wachusett, Waterville Valley,
+- **Personal concierge** (`/weekend`, Wednesday 6pm ET): ranks your ski mountains (Wachusett, Waterville Valley,
   Loon, Killington, Stowe), picks the top 5 nights out near Andover, and finds dog events and boarding deals.
-- **Professional deal desk** (`/deals`, Monday morning): a digest of energy and data center transactions, market
+- **Professional deal desk** (`/deals`, Monday 7:40am ET): a digest of energy and data center transactions, market
   shifts and policy or legal changes, plus an "angle for Angelo" section. Every deal is also logged to a CSV.
 
 ## Layout
