@@ -1,0 +1,19 @@
+FAIL
+Timestamp: 2026-11-13 12:20:03 EST
+
+== python3 personal/scripts/snow_report.py (exit code: 2) ==
+NETWORK_OR_DATA_FAILURE: no mountains scored.
+  wachusett: <urlopen error Tunnel connection failed: 403 Forbidden>
+  waterville: <urlopen error Tunnel connection failed: 403 Forbidden>
+  loon: <urlopen error Tunnel connection failed: 403 Forbidden>
+  killington: <urlopen error Tunnel connection failed: 403 Forbidden>
+  stowe: <urlopen error Tunnel connection failed: 403 Forbidden>
+Fallback: run with --print-urls, fetch each URL, save as personal/data/raw/<id>.json, then rerun with --from-dir personal/data/raw
+
+== curl checks ==
+curl: (56) CONNECT tunnel failed, response 403
+api.open-meteo.com 000
+curl: (56) CONNECT tunnel failed, response 403
+api.gdeltproject.org 000
+curl: (56) CONNECT tunnel failed, response 403
+news.google.com 000
