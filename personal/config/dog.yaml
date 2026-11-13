@@ -1,8 +1,8 @@
 # Dog profile and what to look for.
 dog:
-  name: ""          # fill in
-  size: ""          # small / medium / large
-  notes: ""         # e.g. "loves other dogs", "not great with crowds"
+  name: "Eddie"          # fill in
+  size: "Medium"          # small / medium / large
+  notes: "loves peopole and other dogs"         # e.g. "loves other dogs", "not great with crowds"
 
 radius_miles: 20    # from Andover
 max_items: 5
