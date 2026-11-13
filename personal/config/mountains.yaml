@@ -3,7 +3,7 @@
 # elevation_m = upper-mountain elevation used for the forecast (summit snow, not base rain).
 
 scoring:
-  weekend_days: [Saturday, Sunday]   # add Friday if you take it off
+  weekend_days: [Friday, Saturday, Sunday]   # add Friday if you take it off
   drive_penalty_after_hours: 2.0     # points start dropping after this many hours
   rain_threshold_in: 0.10            # liquid rain (not snow) per day that counts as a rain day
   warm_max_f: 40                     # daytime high above this = soft or slushy
