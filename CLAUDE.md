@@ -22,5 +22,11 @@ Angelo's two Claude Code agents. They live in one repo but are configured separa
 - **Dates:** Always work out "this week" and "this weekend" from today's actual date (America/New_York).
 - **Sources:** Every event, deal or claim needs a source link. Never invent events, venues, prices or deal terms. If something can't be verified, leave it out.
 - **Committing:** After writing a report, commit it with a message like `personal: weekend report 2026-11-13` or `deals: digest 2026-11-16` and push to the current branch.
+- **Publish the public page (after every report):** run `python3 site/build.py`, then publish the built page to that agent's artifact
+  with the Artifact tool (load it with ToolSearch `select:Artifact`; action `publish`, the URL below, `file_path` = absolute path of the built file).
+  Only republish that page, nothing else. If publishing fails, say so in the run summary; the report in the repo still counts.
+  - Weekend Outlook → `site/out/weekend.html` → https://claude.ai/artifact/U8wvwagW6A9UJC2KSFaHPp
+  - Deal Desk → `site/out/deals.html` → https://claude.ai/artifact/YQ9NUZeVt1penjzf8WdgRA
+  These pages can be public: keep reports free of anything private (no email addresses, home addresses or account details).
 - **Email:** Only if a Gmail tool is available in the session. Send the report to the `email_to` address in the agent's config file. If that address is blank or there's no Gmail tool, skip email silently. The report in the repo is the deliverable.
 - **Network:** The shell may not be able to reach outside APIs. If a script fails on network access, follow the fallback in the relevant subagent file rather than retrying the same command.

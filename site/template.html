@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>__TITLE__</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Same type system and palette as the Evening Close Out page. */
+:root {
+  --bg: #EEF1F2; --surface: #FFFFFF; --ink: #18222A; --muted: #56646E; --rule: #CBD3D8;
+  --accent: __ACCENT__; --down: #B04A33;
+  --display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #11181D; --surface: #18222A; --ink: #E4EAED; --muted: #94A3AD; --rule: #2C3A44;
+          --accent: __ACCENT_DARK__; --down: #E58A72; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6;
+       padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+.wrap { max-width: 760px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px));
+        padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 56px; display: grid; gap: 24px; }
+header { display: grid; gap: 6px; }
+.masthead { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px; }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(2.6rem, 9vw, 3.6rem); line-height: .9;
+     letter-spacing: .01em; text-transform: uppercase; margin: 0; }
+.tagline { font-style: italic; color: var(--muted); margin: 0; }
+.picker { display: grid; gap: 2px; font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.picker select { font-family: var(--mono); font-size: .9rem; color: var(--ink); background: var(--surface);
+                 border: 1px solid var(--rule); border-radius: 4px; padding: 6px 8px; }
+.picker select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.stamp { font-family: var(--mono); font-size: .78rem; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
+
+#issue { display: grid; gap: 22px; min-width: 0; }
+#issue > p:first-of-type { font-size: 1.12rem; margin: 0; }
+#issue p { margin: 0; }
+#issue em { color: var(--muted); }
+#issue h2 { font-family: var(--display); font-weight: 600; font-size: 1.5rem; text-transform: uppercase; letter-spacing: .03em;
+            margin: 10px 0 0; padding-bottom: 6px; border-bottom: 2px solid var(--accent); text-wrap: balance; }
+#issue h3 { font-family: var(--mono); font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; margin: 0; color: var(--muted); }
+#issue ul, #issue ol { margin: 0; padding-left: 1.3em; display: grid; gap: 8px; }
+#issue li::marker { color: var(--accent); }
+#issue a { color: var(--accent); text-underline-offset: 2px; overflow-wrap: anywhere; }
+#issue strong { font-weight: 600; }
+.lead { background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--accent); border-radius: 6px; padding: 12px 16px; display: grid; gap: 8px; }
+.table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; }
+table { border-collapse: collapse; width: 100%; font-family: var(--mono); font-size: .78rem; line-height: 1.45; font-variant-numeric: tabular-nums; }
+th { text-align: left; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; font-size: .68rem; color: var(--muted);
+     background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+th, td { padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+td a { font-family: var(--mono); }
+.sources { font-size: .82rem; color: var(--muted); display: grid; gap: 8px; }
+.sources ul { gap: 4px !important; }
+
+.fine { display: grid; gap: 10px; font-size: .85rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 16px; }
+.fine p { margin: 0; }
+.empty { background: var(--surface); border: 1px dashed var(--rule); border-radius: 6px; padding: 24px; text-align: center; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="masthead">
+      <h1>__H1__</h1>
+      <label class="picker" for="day" id="picker-wrap" hidden>Issue of
+        <select id="day"></select>
+      </label>
+    </div>
+    <p class="tagline">__TAGLINE__</p>
+  </header>
+  <main>
+    <span class="stamp" id="stamp"></span>
+    <div id="issue"><div class="empty">No issue yet.</div></div>
+  </main>
+  <footer class="fine">
+    <p>__FOOTER__</p>
+    <p id="built"></p>
+  </footer>
+</div>
+<script id="issues" type="application/json">__DATA__</script>
+<script>
+(function () {
+  const issues = JSON.parse(document.getElementById("issues").textContent || "[]");
+  const sel = document.getElementById("day");
+  const fmt = (iso, long) => {
+    const d = new Date(iso + "T12:00:00");
+    return isNaN(d) ? iso : d.toLocaleDateString("en-US", { weekday: long ? "long" : "short", month: "long", day: "numeric", year: "numeric" });
+  };
+  function show(date) {
+    const it = issues.find((x) => x.date === date) || issues[0];
+    if (!it) return;
+    document.getElementById("issue").innerHTML = it.html;
+    document.getElementById("stamp").textContent = it.title ? it.title : fmt(it.date, true);
+    sel.value = it.date;
+  }
+  sel.innerHTML = issues.map((x) => `<option value="${x.date}">${fmt(x.date, false)}</option>`).join("");
+  document.getElementById("picker-wrap").hidden = issues.length < 2;
+  sel.addEventListener("change", (e) => {
+    show(e.target.value);
+    try { history.replaceState(null, "", "#d" + e.target.value); } catch (_) { location.hash = "d" + e.target.value; }
+  });
+  const fromHash = () => (location.hash.match(/^#d(\d{4}-\d{2}-\d{2})$/) || [])[1];
+  window.addEventListener("hashchange", () => show(fromHash()));
+  show(fromHash());
+  const built = "__BUILT__";
+  if (built) document.getElementById("built").textContent = "Updated " + new Date(built).toLocaleString("en-US",
+    { month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/New_York" }) + " ET";
+})();
+</script>
+</body>
+</html>
