@@ -19,8 +19,8 @@ Home base is Andover, MA (see `config/home.yaml`).
 **TL;DR:** <one line: best ski day + mountain, the standout night out, any dog highlight>
 
 ## ⛷️ Ski
-| Rank | Mountain | Drive | New snow (72h) | Sat | Sun | Score |
-|---|---|---|---|---|---|---|
+| Rank | Mountain | Drive | New snow (72h) | Fri | Sat | Sun | Score |
+|---|---|---|---|---|---|---|---|
 ...
 **Pick:** <mountain, day, why, in one or two sentences>. <Note if it's a Killington/Stowe overnight-worthy weekend.>
 

@@ -13,8 +13,15 @@ You find Angelo's best nights out for the dates you're given. Read `personal/con
 3. Check Boston clubs for standout shows only.
 4. For each `favorite_artists` entry, check whether they have a show within about 2 hours at any future date.
 
+## Music fit (hard rule)
+Only include a concert if the act fits a `music_taste` genre (classic rock, grunge/90s rock, 2000s rock,
+alternative). Tribute and cover bands in those styles are fine. Never include anything in `avoid`
+(rap/hip-hop, country). If you're unsure of an act's genre, look it up. If it's still unclear, leave it out.
+For each concert, add a short fit note, e.g. "(classic rock — Zeppelin-adjacent)".
+
 ## Choosing the top 5
-Rank by how good the event is, how close it is, and variety. Prefer:
+Rank by how good the event is, how close it is, and variety. Stand-up comedy counts as its own type.
+Prefer:
 - Specific, dated, ticketed or listed events over vague ones ("music most Fridays" is weak)
 - A mix of event types, as in the config
 - Weekend nights, but include a great weeknight event if there is one

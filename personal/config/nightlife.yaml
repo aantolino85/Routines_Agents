@@ -4,14 +4,26 @@ radius_miles: 30            # from Andover; Boston shows are fine if they're sta
 include_boston: true
 
 event_types:                # in rough order of preference; edit to taste
-  - live music
+  - live music (see music_taste below)
+  - stand-up comedy
   - trivia night
-  - comedy
   - brewery / taproom events
   - other (festivals, tastings, etc.)
 
-# Artists to always flag if they play within ~2 hours, even if it's not this week (put announcements in a "Heads up" line)
-favorite_artists: []        # e.g. ["Artist One", "Artist Two"]
+# Live music: only shows that fit these styles. The reference bands describe the sound; they don't have to be playing.
+# Tribute and cover bands in these styles count.
+music_taste:
+  - genre: classic rock
+    like: [Led Zeppelin]
+  - genre: grunge / 90s rock
+    like: [Pearl Jam]
+  - genre: 2000s rock
+    like: [Muse, Panic! at the Disco]
+  - genre: alternative rock
+    like: []
+
+# Optional: specific artists to always flag if they play within ~2 hours, even on a future date ("Heads up" line)
+favorite_artists: []
 
 # Places to check first. These are seeds, not limits; add your regulars.
 seed_venues:
@@ -22,4 +34,4 @@ seed_venues:
 
 seed_towns: [Andover, North Andover, Lowell, Lawrence, Haverhill, Methuen, Reading, Newburyport, Salem NH]
 
-avoid: []                   # genres or venues to skip
+avoid: [rap / hip-hop, country]   # genres or venues to skip
