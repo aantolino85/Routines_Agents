@@ -7,13 +7,26 @@ thresholds:
   always_include_if_novel: true   # first-of-a-kind structures get in regardless of size
 
 buckets:
-  renewables_storage_transactions:
+  renewables_transactions:
     focus: >
       M&A, portfolio sales, project finance, tax equity, ITC/PTC credit transfers, construction / term debt,
-      platform capital raises and fund closes in solar, wind, storage, RNG, hydrogen.
-    queries: ["solar portfolio acquisition", "battery storage project financing closed",
+      platform capital raises and fund closes in solar, wind, RNG, hydrogen (and hybrid solar + storage).
+    queries: ["solar portfolio acquisition", "wind farm acquisition", "solar project financing closed",
               "tax credit transfer deal", "tax equity financing", "renewable platform capital raise",
               "infrastructure fund close energy transition"]
+
+  standalone_storage:
+    focus: >
+      Standalone battery storage (BESS) only: project finance, portfolio M&A, platform raises, tolling and
+      offtake agreements, capacity contracts, utility storage procurements/RFP awards, and big US
+      storage policy (ITC eligibility, FEOC rules, tariffs on cells). US first, then major global deals.
+    queries: ["battery storage project financing", "BESS portfolio acquisition", "energy storage tolling agreement",
+              "battery storage capital raise", "utility battery storage procurement award",
+              "standalone storage tax credit", "BESS financial close", "grid-scale battery deal"]
+    # energy-storage.news often blocks page fetches: still use its headlines from search results,
+    # then confirm each item from these alternates.
+    sources: ["energy-storage.news (search results only)", "ess-news.com", "utilitydive.com", "pv-tech.org",
+              "canarymedia.com", "mercomcapital.com", "renewableenergyworld.com", "company press releases (PR Newswire, Business Wire)"]
 
   power_conventional_nuclear:
     focus: >
@@ -37,6 +50,29 @@ buckets:
       capacity auction results (PJM, ISO-NE, NYISO, ERCOT), interconnection queue data, credit / rate shifts.
     queries: ["Treasury guidance energy tax credit", "FERC order co-location", "permitting reform bill energy",
               "PJM capacity auction", "ISO-NE capacity", "solar tariff ruling", "DOE loan programs office"]
+
+# Employer watch: the new employer and its direct competitors. Feeds "Angle for You" every week.
+employer_watch:
+  company: Enel North America
+  aliases: [Enel Green Power North America, Enel SpA (US / North America moves only)]
+  # Anything Enel-related is always included, whatever its size.
+  # Starting list of direct competitors (North American renewables/storage owner-developers). Edit freely.
+  competitors:
+    - NextEra Energy Resources
+    - AES Clean Energy
+    - Invenergy
+    - EDF power solutions North America
+    - RWE Clean Energy
+    - Avangrid
+    - Brookfield Renewable
+    - Engie North America
+    - Clearway Energy
+    - Pattern Energy
+    - Apex Clean Energy
+    - Lightsource bp
+  # "Big" for a competitor: M&A or asset sales, deals at/above the thresholds above, large PPAs,
+  # CEO or strategy changes, US market entry/exit, major earnings-guidance changes, big project wins or cancellations.
+  queries: ["Enel North America", "Enel Green Power North America", "Enel US renewables", "Enel asset sale United States"]
 
 preferred_sources:
   - Reuters (energy), Bloomberg (headlines), WSJ (headlines)

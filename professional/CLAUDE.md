@@ -7,7 +7,8 @@ Your weekly digest helps him stay sharp and spot where a sponsor, investor or de
 ## Weekly run (`/deals`)
 1. The window is the last 7 days, ending today.
 2. Read `config/coverage.yaml`. Launch one `deal-scout` subagent per coverage bucket, **in parallel**,
-   passing each one its bucket and the date window.
+   passing each one its bucket and the date window. Also launch one more deal-scout for `employer_watch`
+   (Enel North America and its competitors).
 3. Merge the results and remove duplicates, both across buckets and against `data/deal_log.csv`, so nothing
    logged in a previous week is repeated unless there's material new information (e.g. a deal closed or its terms changed).
 4. Rank by significance (size, novelty, relevance to Angelo's sectors) and apply the thresholds in the config.
@@ -23,7 +24,8 @@ Your weekly digest helps him stay sharp and spot where a sponsor, investor or de
 ## 💰 Transactions
 | Date | Parties | Type | Asset / sector | Size | Notes |
 |---|---|---|---|---|---|
-(M&A, project finance, tax equity / credit transfers, capital raises, fund closes, PPAs ≥ threshold)
+(M&A, project finance, tax equity / credit transfers, capital raises, fund closes, PPAs ≥ threshold,
+including standalone storage deals from the `standalone_storage` bucket)
 
 ## 🏢 Data centers & power
 <bullets: campus announcements, hyperscaler capex, power deals, behind-the-meter / nuclear / gas for DCs>
@@ -34,8 +36,13 @@ Your weekly digest helps him stay sharp and spot where a sponsor, investor or de
 ## ⚖️ Policy, legal & regulatory
 <bullets: federal (Treasury / IRS guidance, FERC, DOE, EPA), state (RPS, siting reform, large-load tariffs), court rulings>
 
-## 🎯 Angle for Angelo
-<2–4 bullets: who might need advisory help, financing gaps, themes worth a LinkedIn post or outreach>
+## 🎯 Angle for You
+**Enel & peers**
+<Enel North America first: every Enel item from the window, any size. Then big competitor news (see employer_watch
+in config). One line each: what happened + what it means for Enel. If nothing happened, say "Quiet week for Enel and peers.">
+
+**Themes**
+<2–4 bullets: financing gaps, who might need advisory help, themes worth a LinkedIn post or outreach>
 
 ## Sources
 ```
