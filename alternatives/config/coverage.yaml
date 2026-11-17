@@ -1,0 +1,83 @@
+# What the alternatives deal desk covers. Each bucket is searched by its own alts-scout in parallel.
+email_to: ""        # optional; leave blank to skip email
+
+thresholds:
+  min_deal_usd_m: 250          # include transactions at or above this size
+  min_fund_usd_m: 500          # include fund closes at or above this size
+  always_include_if_novel: true   # first-of-a-kind structures or wealth-channel products get in regardless of size
+
+buckets:
+  private_equity_secondaries:
+    focus: >
+      Buyouts, take-privates, growth equity, exits (IPOs, sponsor-to-sponsor sales), secondaries (LP portfolio
+      sales, GP-led continuation vehicles), GP stakes deals, co-investment programs and PE fund final closes.
+    queries: ["private equity take-private announced", "private equity fund final close", "continuation vehicle GP-led secondary",
+              "LP portfolio secondary sale", "GP stakes investment", "secondaries fund close", "private equity exit IPO sponsor"]
+
+  private_credit:
+    focus: >
+      Direct lending, asset-based finance, NAV loans, specialty finance, private credit fund closes, bank-private
+      credit partnerships, BDC activity (public and non-traded), large unitranche financings, defaults and restructurings.
+    queries: ["direct lending fund close", "private credit partnership bank", "asset-based finance fund", "NAV lending facility",
+              "BDC merger", "non-traded BDC fundraising", "unitranche financing private credit", "private credit default restructuring"]
+
+  real_assets:
+    focus: >
+      Private real estate (major portfolio deals, CRE debt, non-traded REIT flows and redemptions), infrastructure
+      (energy transition, digital infrastructure and data centers, transport), infrastructure and real estate fund closes.
+    queries: ["infrastructure fund final close", "real estate portfolio acquisition private equity", "non-traded REIT redemptions",
+              "data center infrastructure investment fund", "commercial real estate debt fund", "infrastructure take-private"]
+
+  wealth_channel_products:
+    focus: >
+      Alternatives built for individual investors and advisers: evergreen / semi-liquid funds, interval and
+      tender-offer funds, non-traded BDCs and REITs, ELTIFs, private markets in 401(k)s and model portfolios,
+      alts platforms (iCapital, CAIS, Moonfare and peers), manager–asset manager partnerships, tokenized funds.
+    queries: ["evergreen private equity fund launch", "interval fund launch private credit", "private markets 401(k) partnership",
+              "alternative investments wealth channel launch", "iCapital CAIS partnership", "semi-liquid infrastructure fund",
+              "tokenized private fund", "public-private model portfolio alternatives"]
+
+  hedge_funds_and_other:
+    focus: >
+      Hedge fund launches and closures, multi-strategy platform moves, notable performance stories, and other alternatives:
+      venture fund closes, royalties, litigation finance, sports and media stakes, insurance-linked and other niche strategies.
+    queries: ["hedge fund launch raises", "multi-strategy hedge fund", "venture capital fund close", "sports team private equity stake",
+              "music royalties fund", "litigation finance fund", "insurance-linked securities fund"]
+
+  regulation_markets:
+    focus: >
+      SEC (private fund rules, accredited investor definition, interval/closed-end fund changes, exams and enforcement),
+      DOL (alternatives in defined contribution plans), FINRA, tax changes, fundraising and exit data, secondary pricing,
+      private credit spreads, CRE valuations.
+    queries: ["SEC private funds rule", "accredited investor definition change", "DOL alternatives 401(k) guidance",
+              "private equity fundraising data quarter", "secondary market pricing discount", "private credit spreads tighten",
+              "SEC enforcement private fund adviser"]
+
+# Manager watch: the big alternatives managers and platforms an RIA's clients are most likely to hold or be pitched.
+manager_watch:
+  managers:
+    - Blackstone
+    - Apollo
+    - KKR
+    - Ares
+    - Blue Owl
+    - Brookfield
+    - Carlyle
+    - TPG
+    - Hamilton Lane
+    - StepStone
+    - Partners Group
+    - Goldman Sachs Asset Management (alternatives)
+    - iCapital
+    - CAIS
+  # "Big" for a manager: fund launches or closes, wealth-channel products and flows, M&A, leadership changes,
+  # redemption limits or NAV marks on retail vehicles, regulatory actions, earnings commentary on fundraising.
+  queries: ["Blackstone BREIT BCRED", "Apollo wealth fund", "KKR private equity conglomerate K-Series", "Blue Owl redemptions",
+            "Ares private credit fund", "alternative asset manager acquisition"]
+
+preferred_sources:
+  - Reuters, Bloomberg (headlines), WSJ (headlines), Financial Times (headlines)
+  - PitchBook News, Private Equity International, Private Debt Investor, PERE, Infrastructure Investor, Buyouts
+  - Institutional Investor, InvestmentNews, Citywire RIA, WealthManagement.com, Financial Advisor IQ
+  - With Intelligence, Secondaries Investor, Hedge Fund Alert / HFM (headlines)
+  - SEC press releases and EDGAR filings, DOL, FINRA; company press releases

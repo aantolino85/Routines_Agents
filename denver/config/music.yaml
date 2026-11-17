@@ -1,0 +1,35 @@
+# What counts as a good night out around Denver, and where to look.
+max_picks: 5
+
+event_types:                # in rough order of preference; edit to taste
+  - live music (see music_taste below) — the main focus
+  - stand-up comedy (only standouts)
+  - other (festivals, brewery shows, etc.)
+
+# Live music: only shows that fit these styles. The reference bands describe the sound; they don't have to be playing.
+# Tribute and cover bands in these styles count.
+music_taste:
+  - genre: classic rock
+    like: [Led Zeppelin]
+  - genre: grunge / 90s rock
+    like: [Pearl Jam]
+  - genre: 2000s rock
+    like: [Muse, Panic! at the Disco]
+  - genre: alternative rock
+    like: []
+
+# Optional: specific artists to always flag if they play in Colorado, even on a future date ("Heads up" line)
+favorite_artists: []
+
+# Places to check first. These are seeds, not limits.
+seed_venues:
+  - Red Rocks Amphitheatre (Morrison)
+  - Ball Arena, Fillmore Auditorium, Mission Ballroom, Ogden Theatre, Gothic Theatre, Bluebird Theater (Denver)
+  - Summit, Marquis Theater, Larimer Lounge, Globe Hall (Denver)
+  - Fiddler's Green Amphitheatre (Greenwood Village)
+  - Boulder Theater, Fox Theatre (Boulder)
+  - Washington's, Aggie Theatre, The Lyric (Fort Collins)
+  - Budweiser Events Center / Blue FCU Arena, Rialto Theater (Loveland)
+  - Comedy Works (Denver)
+
+avoid: [rap / hip-hop, country]   # genres or venues to skip

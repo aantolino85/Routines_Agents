@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Build the public pages from the markdown reports.
 
-  python3 site/build.py            # builds site/out/weekend.html and site/out/deals.html
+  python3 site/build.py            # builds every page in site/out/
+  python3 site/build.py denver     # builds only the named page(s)
 
 Each page holds every issue (newest first) with a picker, in the Evening Close Out style.
 Everything is inlined, so the page works for anyone with the link, signed in or not.
@@ -41,6 +42,26 @@ PAGES = {
         "accent": ("#1F5C52", "#5FB3A3"),
         "max_issues": 26,
     },
+    "alts": {
+        "src": ROOT / "alternatives" / "digests",
+        "title": "Alternatives Deal Desk",
+        "h1": "Alts<br>Deal Desk",
+        "tagline": "The week's alternative investment deals, fund launches and rule changes, through an RIA's lens.",
+        "footer": "Not investment advice. Compiled each week by Claude from press releases, filings and trade "
+                  "press; items marked “reported” are unconfirmed. Verify figures and offering terms with the primary source.",
+        "accent": ("#1F5C52", "#5FB3A3"),
+        "max_issues": 26,
+    },
+    "denver": {
+        "src": ROOT / "denver" / "reports",
+        "title": "Denver Weekend",
+        "h1": "Denver<br>Weekend",
+        "tagline": "Live music and things to do with the kids: the weekend around Denver.",
+        "footer": "Compiled each week by Claude from venue calendars and event listings. "
+                  "Check times, ages and tickets with the venue before you go.",
+        "accent": ("#1F5C52", "#5FB3A3"),
+        "max_issues": 26,
+    },
 }
 
 
@@ -73,7 +94,7 @@ def render_issue(md_text: str) -> tuple[str, str]:
     # Sources section: smaller type.
     body = re.sub(r'(<h2>[^<]*Sources[^<]*</h2>)(.*)$', r'\1<div class="sources">\2</div>', body, flags=re.S)
     # Lead block: the opening TL;DR / Top 3 paragraph (and a list right after it) gets a card.
-    m = re.match(r'\s*((?:<p><em>.*?</em></p>\s*)?)(<p><strong>(?:TL;DR|Top 3)[^<]*</strong>.*?</p>(?:\s*<ul>.*?</ul>)?)',
+    m = re.match(r'\s*((?:<p><em>.*?</em></p>\s*)?)(<p><strong>(?:TL;DR|Top 3|Top 5)[^<]*</strong>.*?</p>(?:\s*<ul>.*?</ul>)?)',
                  body, flags=re.S)
     if m:
         body = body[:m.start(2)] + f'<div class="lead">{m.group(2)}</div>' + body[m.end(2):]
@@ -104,6 +125,9 @@ def build(name: str, cfg: dict) -> Path:
 
 
 if __name__ == "__main__":
-    for name, cfg in PAGES.items():
+    import sys
+    wanted = sys.argv[1:] or list(PAGES)
+    for name in wanted:
+        cfg = PAGES[name]
         p = build(name, cfg)
         print(f"{name}: {p} ({p.stat().st_size // 1024} KB)")

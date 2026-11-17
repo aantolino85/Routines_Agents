@@ -1,0 +1,21 @@
+# Kid-friendly activities: what to look for and where.
+max_picks: 5
+kids_ages: "all ages"       # edit, e.g. "5 and 8", so picks fit the right age range
+
+look_for:
+  - family shows, children's theater, holiday and seasonal events
+  - museum, zoo and aquarium events, free days and special exhibits
+  - festivals, markets and community events that welcome kids
+  - outdoor and active fun: ice skating, sledding, nature centers, farms, easy hikes
+  - library and rec-center story times, workshops and kids' classes open to drop-ins
+  - kids' sports and family-friendly games (Nuggets, Avalanche, Rockies, Colorado State, local minor league)
+
+# Places to check first. These are seeds, not limits. Cover Fort Collins and Loveland every week.
+seed_sources:
+  - Denver: Denver Zoo, Denver Museum of Nature & Science, Children's Museum of Denver, Downtown Aquarium,
+    Denver Botanic Gardens, Denver Center for the Performing Arts (family shows), Denver Public Library events
+  - Boulder / Longmont: Boulder Public Library, WOW! Children's Museum (Lafayette)
+  - Loveland: Loveland Museum, Benson Sculpture Garden, Loveland Public Library events, City of Loveland events calendar
+  - Fort Collins: Fort Collins Museum of Discovery, The Farm at Lee Martinez Park, Gardens on Spring Creek,
+    Poudre River Public Library events, Visit Fort Collins events, Colorado State University family events
+  - Area calendars: Mile High Mamas, Macaroni KID (Denver, Fort Collins, Loveland editions), Eventbrite family events

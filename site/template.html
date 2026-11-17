@@ -95,7 +95,7 @@ td a { font-family: var(--mono); }
   };
   function show(date) {
     const it = issues.find((x) => x.date === date) || issues[0];
-    if (!it) return;
+    if (!it) { document.getElementById("issue").innerHTML = "<p><em>The first issue arrives with the next scheduled run.</em></p>"; return; }
     document.getElementById("issue").innerHTML = it.html;
     document.getElementById("stamp").textContent = it.title ? it.title : fmt(it.date, true);
     sel.value = it.date;

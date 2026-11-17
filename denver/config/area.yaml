@@ -1,0 +1,13 @@
+# Home base and coverage area for the Denver weekend concierge
+home:
+  name: Denver, CO
+  latitude: 39.7392
+  longitude: -104.9903
+  timezone: America/Denver
+
+# Towns to cover. Fort Collins and Loveland are included for both music and kid activities.
+towns: [Denver, Aurora, Lakewood, Englewood, Littleton, Golden, Morrison, Broomfield, Westminster, Boulder,
+        Longmont, Loveland, Fort Collins]
+
+# Email delivery (optional). Leave blank to skip email; reports are always committed to the repo.
+email_to: ""
