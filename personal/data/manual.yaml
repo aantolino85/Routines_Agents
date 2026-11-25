@@ -1,32 +1,44 @@
-# Sources: killington.com/mountain-report (Nov 18 5:04pm), OnTheSnow projected openings, SnowStash,
-# snow-forecast.com summit 6-day (issued 12pm Nov 18 2026). C->F, km/h->mph, mm->in.
-# high_f = max of AM/PM; low_f = min of AM/PM/night; wind = max period; rain = day total.
-# recent_snow_in omitted where no 72h figure was published.
+# Thanksgiving weekend Nov 27-29, 2026. Gathered 2026-11-25.
+# Status: OnTheSnow New England ski report + killington.com/mountain-report.
+# Forecast: snow-forecast.com summit (top) 6-day forecasts, converted from cm/mm/C/km/h.
+# Recent snow: Killington resort report (48h 0", 7-day 0"); others per snow-forecast.com "last snowfall" date (Nov 12-15).
 wachusett:
   status: closed
   opening: "Nov 27 (projected)"
+  recent_snow_in: 0
+  days:
+    Fri: {snow_in: 0, high_f: 45, low_f: 36, wind_mph: 16, rain_in: 0.24}
+    Sat: {snow_in: 0, high_f: 39, low_f: 36, wind_mph: 16, rain_in: 0}
+    Sun: {snow_in: 0, high_f: 46, low_f: 41, wind_mph: 19, rain_in: 0}
 waterville:
   status: closed
   opening: "Nov 28 (projected)"
+  recent_snow_in: 0
+  days:
+    Fri: {snow_in: 0, high_f: 41, low_f: 30, wind_mph: 25, rain_in: 0.08}
+    Sat: {snow_in: 0, high_f: 34, low_f: 28, wind_mph: 12, rain_in: 0}
+    Sun: {snow_in: 0.4, high_f: 32, low_f: 30, wind_mph: 25, rain_in: 0}
 loon:
   status: closed
-  opening: "Nov 27 (projected)"
+  opening: "Dec 4 (projected)"
+  recent_snow_in: 0
   days:
-    Fri: {snow_in: 0, high_f: 43, low_f: 39, wind_mph: 19, rain_in: 0}
-    Sat: {snow_in: 0, high_f: 50, low_f: 46, wind_mph: 12, rain_in: 0}
-    Sun: {snow_in: 0, high_f: 52, low_f: 46, wind_mph: 16, rain_in: 1.5}
+    Fri: {snow_in: 0.4, high_f: 43, low_f: 28, wind_mph: 16, rain_in: 0.04}
+    Sat: {snow_in: 0, high_f: 34, low_f: 30, wind_mph: 9, rain_in: 0}
+    Sun: {snow_in: 0.4, high_f: 34, low_f: 32, wind_mph: 22, rain_in: 0}
 killington:
   status: open
   trails: "3/155"
-  days:
-    Fri: {snow_in: 0, high_f: 41, low_f: 36, wind_mph: 28, rain_in: 0}
-    Sat: {snow_in: 0, high_f: 50, low_f: 46, wind_mph: 19, rain_in: 0}
-    Sun: {snow_in: 0, high_f: 48, low_f: 45, wind_mph: 25, rain_in: 1.69}
-stowe:
-  status: closed
-  opening: "Nov 20-21 (projected, unconfirmed)"
   recent_snow_in: 0
   days:
-    Fri: {snow_in: 0, high_f: 39, low_f: 36, wind_mph: 22, rain_in: 0}
-    Sat: {snow_in: 0, high_f: 50, low_f: 46, wind_mph: 19, rain_in: 0}
-    Sun: {snow_in: 0, high_f: 50, low_f: 45, wind_mph: 22, rain_in: 1.34}
+    Fri: {snow_in: 0, high_f: 37, low_f: 30, wind_mph: 28, rain_in: 0.04}
+    Sat: {snow_in: 0, high_f: 30, low_f: 28, wind_mph: 22, rain_in: 0}
+    Sun: {snow_in: 0.4, high_f: 37, low_f: 30, wind_mph: 28, rain_in: 0}
+stowe:
+  status: closed
+  opening: "Dec 4 (projected)"
+  recent_snow_in: 0
+  days:
+    Fri: {snow_in: 0.4, high_f: 41, low_f: 30, wind_mph: 25, rain_in: 0.08}
+    Sat: {snow_in: 0, high_f: 30, low_f: 28, wind_mph: 16, rain_in: 0}
+    Sun: {snow_in: 0.4, high_f: 37, low_f: 32, wind_mph: 25, rain_in: 0}
